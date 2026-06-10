@@ -1,5 +1,5 @@
-from deps import model_installer
-from deps import node_installer
+from deps.model_installer import download_models
+from deps.node_installer import install_nodes
 from deps.classes import install_job
 
 import os
@@ -20,7 +20,7 @@ def install_models(jobs: install_job):
         exit()
 
     # Install nodes and models
-    node_installer.install_node(jobs.nodes)
-    model_installer.download_models(jobs.models)
+    install_nodes(jobs.nodes)
+    download_models(jobs.models)
 
     pass
