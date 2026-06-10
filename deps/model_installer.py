@@ -1,7 +1,7 @@
 
 
 import aria2p
-from installer import model_info
+from deps.installer import model_info
 
 
 # Koble til aria2 RPC

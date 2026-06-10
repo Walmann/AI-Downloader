@@ -1,5 +1,5 @@
-import model_installer
-import node_installer
+from deps import model_installer
+from deps import node_installer
 
 import os
 import sys
