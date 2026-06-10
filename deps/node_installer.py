@@ -6,9 +6,10 @@ import sys
 from deps.classes import node_info
 
 def install_nodes(nodes: list[node_info]):
-    nodes_root = "/workspace/ComfyUI/custom_nodes/"
+    nodes_root = "/workspace/runpod-slim/ComfyUI/custom_nodes/"
 
     for node in nodes:
+        os.chdir = nodes_root
         Repo.clone_from(url=node.url, to_path=node.dir)
 
         node_dir = nodes_root + node.dir
