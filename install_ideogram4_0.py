@@ -1,6 +1,6 @@
 
-from deps.installer import model_info, install_job, install, node_info
-
+from deps.installer import install
+from deps.classes import model_info, node_info, install_job
 
 
 # All installers needs to include the above. And have the same structure as bellow.

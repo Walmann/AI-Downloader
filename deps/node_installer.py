@@ -3,7 +3,7 @@ from git import Repo
 import sys
 
 
-from deps.installer import node_info
+from deps.classes import node_info
 
 def install_nodes(nodes: list[node_info]):
     nodes_root = "/workspace/ComfyUI/custom_nodes/"
