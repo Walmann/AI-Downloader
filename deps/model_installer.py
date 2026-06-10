@@ -13,7 +13,7 @@ ariaClient = aria2p.Client(
 
 aria2 = aria2p.API(ariaClient)
 
-def download(models: list[model_info]):
+def download_models(models: list[model_info]):
     for item in models:
         aria2.add_uris(
             [item.url],

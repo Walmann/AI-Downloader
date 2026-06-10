@@ -21,6 +21,6 @@ def install(jobs: install_job):
 
     # Install nodes and models
     node_installer.install_node(jobs.nodes)
-    model_installer.download(jobs.models)
+    model_installer.download_models(jobs.models)
 
     pass
