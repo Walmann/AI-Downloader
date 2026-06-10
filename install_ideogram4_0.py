@@ -17,7 +17,7 @@ models=
     ],
 nodes=
     [
-        node_info("https://github.com/kijai/ComfyUI-KJNodes", "ComfyUI-KJNodes")
+        node_info(url="https://github.com/kijai/ComfyUI-KJNodes", dir="ComfyUI-KJNodes")
     ]
 
 ))
