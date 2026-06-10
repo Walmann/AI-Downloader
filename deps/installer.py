@@ -1,5 +1,6 @@
 from deps import model_installer
 from deps import node_installer
+from deps.classes import install_job
 
 import os
 import sys
