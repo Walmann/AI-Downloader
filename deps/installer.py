@@ -25,13 +25,14 @@ class install_job:
 
 def install(jobs: install_job):
     # Change dir to ComfyUI
-    os.chdir("/workspace/ComfyUI/")
+    ComfyInstallLocations = ["/workspace/ComfyUI/", "/workspace/runpod-slim/ComfyUI/"]
+    os.chdir("ComfyUI")
 
 
     if sys.prefix == sys.base_prefix:
         print("Script is not running inside virtual enviorment.")
         exit()
-    
+
     # Install nodes and models
     node_installer.install_node(jobs.nodes)
     model_installer.download(jobs.models)
