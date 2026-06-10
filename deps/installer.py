@@ -26,7 +26,7 @@ class install_job:
 def install(jobs: install_job):
     # Change dir to ComfyUI
     ComfyInstallLocations = ["/workspace/ComfyUI/", "/workspace/runpod-slim/ComfyUI/"]
-    os.chdir("ComfyUI")
+    os.chdir("../ComfyUI")
 
 
     if sys.prefix == sys.base_prefix:
