@@ -11,7 +11,9 @@ def install_nodes(nodes: list[node_info]):
     for node in nodes:
         Repo.clone_from(url=node.url, to_path=node.url)
 
-        os.chdir(nodes_root + node.dir)
+        node_dir = nodes_root + node.dir
+        print(node_dir)
+        os.chdir(node_dir)
         
         print(f"Installing requirements for {node.dir}")
         sys.executable("pip", "install", "-r", "requirements.txt")
