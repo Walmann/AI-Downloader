@@ -9,9 +9,9 @@ import sys
 # This module is to start the installation of models and nodes. 
 
 
-def install(jobs: install_job):
+def install_models(jobs: install_job):
     # Change dir to ComfyUI
-    ComfyInstallLocations = ["/workspace/ComfyUI/", "/workspace/runpod-slim/ComfyUI/"]
+    # ComfyInstallLocations = ["/workspace/ComfyUI/", "/workspace/runpod-slim/ComfyUI/"]
     os.chdir("../ComfyUI")
 
 

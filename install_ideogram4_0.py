@@ -1,12 +1,12 @@
 
-from deps.installer import install
+from deps.installer import install_models
 from deps.classes import model_info, node_info, install_job
 
 
 # All installers needs to include the above. And have the same structure as bellow.
 # If you need to do some custom work to make things work, you can freely add functions. 
 
-install(jobs=install_job(
+install_models(jobs=install_job(
 models=
     [
     model_info("https://huggingface.co/Comfy-Org/Ideogram-4/resolve/main/diffusion_models/ideogram4_fp8_scaled.safetensors", "models/diffusion_models"),
