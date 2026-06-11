@@ -24,8 +24,9 @@ def download_models(settings: Settings, models: list[model_info]):
 	if not len(aria2.get_downloads()) == 0:
 		print("Clearing excisting queue.")
 		try:
-			for d in aria2.get_downloads():
-				aria2.remove(d, force=True)
+			aria2.remove(aria2.get_downloads(), force=True)
+			# for d in aria2.get_downloads():
+			# 	aria2.remove(d, force=True)
 		except Exception as e: 
 			print(f"Could not remove {d.gid}: {e}")
 
