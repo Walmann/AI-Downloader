@@ -10,6 +10,8 @@ aria2_process = subprocess.Popen([
     "--enable-rpc",
     "--rpc-listen-port=6800",
     "--rpc-allow-origin-all",
+	"--max-concurrent-downloads=5",
+	"--continue=true"
 ])
 
 sleep(1) 
