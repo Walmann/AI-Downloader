@@ -16,12 +16,14 @@ sleep(1)
 
 def download_models(settings: Settings, models: list[model_info]):
 	# Koble til aria2 RPC
+	print("Creating Aria client")
 	aria2 = aria2p.API(aria2p.Client(host="http://localhost", port=6800, secret=""))
 
-
+	print(f"Adding {len(models)} downloads to queue.")
 	for item in models:
 		download_path = settings.loc_models / item.dir
 		aria2.add_uris([item.url], options={"dir": str(download_path)})
+		print(f"Added {item.dir} to download queue")
 		pass
 	
 	
