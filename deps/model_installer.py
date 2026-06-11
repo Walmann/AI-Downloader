@@ -21,7 +21,7 @@ def download_models(settings: Settings, models: list[model_info]):
 	print("Creating Aria client")
 	aria2 = aria2p.API(aria2p.Client(host="http://localhost", port=6800, secret=""))
 
-	if not len(aria2.get_download) == 0:
+	if not len(aria2.get_downloads()) == 0:
 		print("Clearing excisting queue.")
 		try:
 			for d in aria2.get_downloads():
