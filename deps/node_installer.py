@@ -29,6 +29,8 @@ def install_nodes(settings: Settings, nodes: list[node_info]):
 
         print(f"Installing requirements for {node.dir}")
         pip_exe = os.path.join(settings.loc_venv, "Scripts", "pip.exe")
+        if not os.path.isdir(pip_exe):
+            pip_exe = os.path.join(settings.loc_venv, "bin", "pip.exe")
         try:
             subprocess.run([
                 pip_exe,
