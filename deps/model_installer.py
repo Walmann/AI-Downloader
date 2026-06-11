@@ -30,6 +30,11 @@ def download_models(settings: Settings, models: list[model_info]):
 	while True:
 		active_downloads = aria2.get_downloads()
 
+
+		for d in active_downloads:
+			d.update()  # refresh status
+			print(d.name, d.status, d.progress_string())
+
 		if all(d.is_complete or d.is_removed for d in active_downloads):
 			print("Download finished!")
 			break
