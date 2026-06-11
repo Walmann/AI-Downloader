@@ -28,7 +28,10 @@ def download_models(settings: Settings, models: list[model_info]):
 			# for d in aria2.get_downloads():
 			# 	aria2.remove(d, force=True)
 		except Exception as e: 
-			print(f"Could not remove {d.gid}: {e}")
+			# print(f"Could not remove {d.gid}: {e}")
+			print(f"Could not remove all download jobs: {e}")
+
+			exit()
 
 
 	print(f"Adding {len(models)} downloads to queue.")
